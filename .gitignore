@@ -40,3 +40,4 @@ Thumbs.db
 *.un~
 ### LaTeX files
 *.aux
+*.out
