@@ -5,12 +5,22 @@
 % Creative Commons Attribution Notice:
 % Portions of this file courtesy of Mark L. Palmeri, M.D., Ph.D.
 % https://github.com/mlp6/Intro-Medical-Instrumentation
-\documentclass[11pt]{report}
+%\documentclass[11pt]{exam}
+\documentclass[11pt,letterpaper,draft]{exam}
 \usepackage{epsf}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{palatino}
 \usepackage[dvips]{graphics}
+% The following relax commands are needed to avoid conflict between
+% the Exam class (exam.cls) and the fancyhdr (fancyhrd.sty) package:
+\let\lhead\relax
+\let\chead\relax
+\let\rhead\relax
+\let\lfoot\relax
+\let\cfoot\relax
+\let\rfoot\relax
+% Now it's OK to use fancyhdr with the Exam class.
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 \parindent 0in
@@ -20,6 +30,18 @@
 \textheight 8.5in
 \textwidth 6.5in
 \topmargin -0.25in
+
+
+% Settings for the Exam Class Environment
+\usepackage{ifpdf}
+\printanswers
+\unframedsolutions
+\addpoints
+%Change question parts to be enumerated w/o parenthesis:
+\renewcommand{\partlabel}{\thepartno .}
+% Defines the title of the solution environment:
+\renewcommand{\solutiontitle}{\noindent\textbf{}\noindent}
+\renewcommand{\SolutionEmphasis}{\itshape \small}
 
 \input{../handout_header}
 
@@ -31,13 +53,22 @@
 \setcounter{equation}{0}
 \setcounter{figure}{0}
 \begin{center}
-\Large{\textbf{Fourier Analysis}}
+\Large{\textbf{Asthma}}
 \normalsize
 \end{center}
 
-\section*{The Fourier Transform}
+\section*{Introduction}
 
-\textit{Recall} that the Laplace transform is a powerful analysis tool
+\textit{Recall} that asthma affects over 300 million people worldwide, and that
+this number is increasing. It accounts for over 250,000 deaths annually.
+
+As with other respiratory diseases, Asthma places patients at risk for
+increased perioperative morbidity and mortality, as well as increased hospital
+length of stay.
+
+It occurs about 20 percent more frequently in women, and is caused by both
+genetic and external factors.
+
 that allows the conversion of information between two different
 domains, i.e.\ the \text{time} and \text{frequency} domains.
 
@@ -52,7 +83,7 @@ method.
 While not every mathematical function has a Fourier transform, any
 physically realizable signal \textit{does}.  That's good enough for us!
 
-\subsubsection*{So what?}
+\subsubsection*{Pathogeneis and Diagnosis}
 
 There are a number of reasons this is important, although they may not
 be apparent until you begin applying the transform in practical
